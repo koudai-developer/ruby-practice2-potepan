@@ -1,3 +1,4 @@
+# じゃんけんの判定を返すメソッド
 def janken(my_hand, result)
   if result == :draw
     puts "しょ！"
@@ -23,6 +24,7 @@ def janken(my_hand, result)
   end
 end
 
+# あっちむいてほいの判定を返すメソッド
 def acchi_muite_hoi(result)
   puts "あっち向いて・・・"
   puts "0:上 1:右 2:下 3:左"
@@ -33,7 +35,7 @@ def acchi_muite_hoi(result)
 
   unless (0..3).include?(my_direction)
     puts "不正な値です。"
-    return false
+    return false, result
   end
 
   puts "-------------------------------"
